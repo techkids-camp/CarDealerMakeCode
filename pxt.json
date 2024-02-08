@@ -9,7 +9,14 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "custom.ts"
+        "custom.ts",
+        "tutorial0.md",
+        "tutorial1.md",
+        "tutorial2.md",
+        "tutorial3.md",
+        "tutorial4.md",
+        "tutorialfree.md",
+        "tutorialinit.md"
     ],
     "testFiles": [
         "test.ts"
