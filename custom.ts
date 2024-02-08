@@ -63,7 +63,7 @@ namespace custom {
     //% blockId=whenStartZero
     //% block=くるまをつくる0
     export function whenStartZero(handler: () => void): void {
-        player.execute("scoreboard players set @s phase 2")
+        player.execute("scoreboard players add @s phase 1")
     }
 
     //% blockId=whenStartOne
@@ -75,9 +75,9 @@ namespace custom {
             bodyColor == BodyColor.White,
             tireType == TireType.Silver
         ){
-            player.execute("scoreboard players set @s phase 5")
+            player.execute("scoreboard players add @s phase 1")
         } else {
-            player.execute("scoreboard players set @s phase 6")
+            player.execute("scoreboard players add @s phase 2")
         }
     }
 
@@ -90,9 +90,9 @@ namespace custom {
             bodyColor == BodyColor.Blue,
             tireType == TireType.Yellow
         ) {
-            player.execute("scoreboard players set @s phase 9")
+            player.execute("scoreboard players add @s phase 1")
         } else {
-            player.execute("scoreboard players set @s phase 10")
+            player.execute("scoreboard players add @s phase 2")
         }
     }
 
@@ -105,9 +105,9 @@ namespace custom {
             bodyColor == BodyColor.Yellow,
             tireType == TireType.Yellow
         ) {
-            player.execute("scoreboard players set @s phase 13")
+            player.execute("scoreboard players add @s phase 1")
         } else {
-            player.execute("scoreboard players set @s phase 14")
+            player.execute("scoreboard players add @s phase 2")
         }
     }
 
@@ -120,9 +120,9 @@ namespace custom {
             bodyColor == BodyColor.Black,
             tireType == TireType.Black
         ) {
-            player.execute("scoreboard players set @s phase 17")
+            player.execute("scoreboard players add @s phase 1")
         } else {
-            player.execute("scoreboard players set @s phase 18")
+            player.execute("scoreboard players add @s phase 2")
         }
     }
 
@@ -130,7 +130,6 @@ namespace custom {
     //% block=くるまをつくるときフリー
     export function whenStartFree(handler: () => void): void {
         handler();
-        player.execute("summon nogard:mech_car")
     }
 
     //% blockId=whenStartDummy
