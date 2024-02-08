@@ -60,8 +60,8 @@ namespace custom {
         tireType = newTireType
     }
 
-    //% blockId=whenStartOne
-    //% block=くるまをつくる1
+    //% blockId=whenStartZero
+    //% block=くるまをつくる0
     export function whenStartZero(handler: () => void): void {
         player.execute("scoreboard players set @s phase 2")
     }
