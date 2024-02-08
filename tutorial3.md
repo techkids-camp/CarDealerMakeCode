@@ -2,6 +2,11 @@
 ### @hideIteration true
 
 # 車を作ってみよう！
+
+## やってみよう！
+
+やってみよう！
+
 ```ghost
 custom.whenStartThree(function () {
     custom.selectCarType(CarType.Compact)
