@@ -8,11 +8,11 @@
 やってみよう！
 
 ```ghost
-custom.whenStartFree(function () {
+custom2.whenStartFree(function () {
 })
 ```
 
 ```template
-custom.whenStartFree(function () {
+custom2.whenStartFree(function () {
 })
 ```

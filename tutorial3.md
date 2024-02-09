@@ -8,7 +8,7 @@
 やってみよう！
 
 ```ghost
-custom.whenStartThree(function () {
+custom2.whenStartThree(function () {
     custom.selectCarType(CarType.Compact)
     custom.selectBodyColor(BodyColor.Yellow)
     custom.selectTireType(TireType.Yellow)
@@ -16,7 +16,7 @@ custom.whenStartThree(function () {
 ```
 
 ```template
-custom.whenStartThree(function () {
+custom2.whenStartThree(function () {
     custom.selectCarType(CarType.Compact)
     custom.selectBodyColor(BodyColor.Yellow)
     custom.selectTireType(TireType.Yellow)

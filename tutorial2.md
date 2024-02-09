@@ -8,7 +8,7 @@
 やってみよう！
 
 ```ghost
-custom.whenStartTwo(function () {
+custom2.whenStartTwo(function () {
     custom.selectCarType(CarType.Wagon)
     custom.selectBodyColor(BodyColor.Blue)
     custom.selectTireType(TireType.Yellow)
@@ -16,7 +16,7 @@ custom.whenStartTwo(function () {
 ```
 
 ```template
-custom.whenStartTwo(function () {
+custom2.whenStartTwo(function () {
     custom.selectCarType(CarType.Wagon)
     custom.selectBodyColor(BodyColor.Blue)
     custom.selectTireType(TireType.Yellow)

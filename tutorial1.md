@@ -8,7 +8,7 @@
 やってみよう！
 
 ```ghost
-custom.whenStartOne(function () {
+custom2.whenStartOne(function () {
     custom.selectCarType(CarType.Sedan)
     custom.selectBodyColor(BodyColor.White)
     custom.selectTireType(TireType.Silver)
@@ -16,7 +16,7 @@ custom.whenStartOne(function () {
 ```
 
 ```template
-custom.whenStartOne(function () {
+custom2.whenStartOne(function () {
     custom.selectCarType(CarType.Sedan)
     custom.selectBodyColor(BodyColor.White)
     custom.selectTireType(TireType.Silver)
