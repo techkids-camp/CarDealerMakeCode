@@ -52,6 +52,12 @@ let tireType: TireType | null = null
  */
 //% weight=100 color=#0fbc11 icon="\uf1b9" block="カーディーラー"
 namespace custom {
+    //% blockId=whenStartZero
+    //% block=くるまをつくるとき
+    export function whenStartZero(handler: () => void): void {
+        player.execute("scoreboard players add @s phase 1")
+    }
+
     //% blockId=whenStartOne
     //% block=くるまをつくるとき
     export function whenStartOne(handler: () => void): void {

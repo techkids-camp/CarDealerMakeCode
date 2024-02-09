@@ -9,6 +9,9 @@
 
 ```ghost
 custom.whenStartFree(function () {
+    custom2.selectCarType(CarType.Sports)
+    custom2.selectBodyColor(BodyColor.Black)
+    custom2.selectTireType(TireType.Black)
 })
 ```
 
