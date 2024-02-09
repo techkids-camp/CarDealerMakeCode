@@ -8,17 +8,17 @@
 やってみよう！
 
 ```ghost
-custom2.whenStartTwo(function () {
-    custom.selectCarType(CarType.Wagon)
-    custom.selectBodyColor(BodyColor.Blue)
-    custom.selectTireType(TireType.Yellow)
+custom.whenStartTwo(function () {
+    custom2.selectCarType(CarType.Wagon)
+    custom2.selectBodyColor(BodyColor.Blue)
+    custom2.selectTireType(TireType.Yellow)
 })
 ```
 
 ```template
-custom2.whenStartTwo(function () {
-    custom.selectCarType(CarType.Wagon)
-    custom.selectBodyColor(BodyColor.Blue)
-    custom.selectTireType(TireType.Yellow)
+custom.whenStartTwo(function () {
+    custom2.selectCarType(CarType.Wagon)
+    custom2.selectBodyColor(BodyColor.Blue)
+    custom2.selectTireType(TireType.Yellow)
 })
 ```

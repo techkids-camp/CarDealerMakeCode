@@ -8,11 +8,11 @@
 やってみよう！
 
 ```ghost
-custom2.whenStartDummy(function () {
+custom.whenStartDummy(function () {
 })
 ```
 
 ```template
-custom2.whenStartDummy(function () {
+custom.whenStartDummy(function () {
 })
 ```
