@@ -10,15 +10,15 @@
 ```ghost
 custom.whenStartFour(function () {
     custom2.selectCarType(CarType.Sports)
-    custom2.selectBodyColor(BodyColor.Black)
-    custom2.selectTireType(TireType.Black)
+    custom3.selectBodyColor(BodyColor.Black)
+    custom4.selectTireType(TireType.Black)
 })
 ```
 
 ```template
 custom.whenStartFour(function () {
     custom2.selectCarType(CarType.Sports)
-    custom2.selectBodyColor(BodyColor.Black)
-    custom2.selectTireType(TireType.Black)
+    custom3.selectBodyColor(BodyColor.Black)
+    custom4.selectTireType(TireType.Black)
 })
 ```

@@ -62,11 +62,11 @@ namespace custom {
     //% block=くるまをつくるとき
     export function whenStartOne(handler: () => void): void {
         handler();
-        if(
+        if (
             carType == CarType.Sedan,
             bodyColor == BodyColor.White,
             tireType == TireType.Silver
-        ){
+        ) {
             player.execute("scoreboard players add @s phase 1")
         } else {
             player.execute("scoreboard players add @s phase 2")
@@ -135,20 +135,32 @@ namespace custom {
 /**
  * Custom blocks
  */
-//% weight=100 color=#2f4f4f icon="\uf0ad" block="くるまづくり"
+//% weight=100 color=#f4a460 icon="\uf0ad" block="くるまづくり"
 namespace custom2 {
     //% blockId=selectCarType
     //% block="車のタイプを$newCarTypeにする"
     export function selectCarType(newCarType: CarType): void {
         carType = newCarType
     }
+}
 
+/**
+ * Custom blocks
+ */
+//% weight=100 color=#2f4f4f icon="\uf0ad" block="くるまづくり"
+namespace custom3 {
     //% blockId=selectBodyColor
     //% block="ボディの色を$newBodyColorにする"
     export function selectBodyColor(newBodyColor: BodyColor): void {
         bodyColor = newBodyColor
-    } 
+    }
+}
 
+/**
+ * Custom blocks
+ */
+//% weight=100 color=#0d0015 icon="\uf0ad" block="くるまづくり"
+namespace custom4 {
     //% blockId=selectTireType
     //% block="タイヤを$newTireTypeにする"
     export function selectTireType(newTireType: TireType): void {

@@ -10,15 +10,15 @@
 ```ghost
 custom.whenStartOne(function () {
     custom2.selectCarType(CarType.Sedan)
-    custom2.selectBodyColor(BodyColor.White)
-    custom2.selectTireType(TireType.Silver)
+    custom3.selectBodyColor(BodyColor.White)
+    custom4.selectTireType(TireType.Silver)
 })
 ```
 
 ```template
 custom.whenStartOne(function () {
     custom2.selectCarType(CarType.Sedan)
-    custom2.selectBodyColor(BodyColor.White)
-    custom2.selectTireType(TireType.Silver)
+    custom3.selectBodyColor(BodyColor.White)
+    custom4.selectTireType(TireType.Silver)
 })
 ```

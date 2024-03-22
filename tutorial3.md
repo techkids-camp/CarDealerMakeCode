@@ -10,15 +10,15 @@
 ```ghost
 custom.whenStartThree(function () {
     custom2.selectCarType(CarType.Compact)
-    custom2.selectBodyColor(BodyColor.Yellow)
-    custom2.selectTireType(TireType.Yellow)
+    custom3.selectBodyColor(BodyColor.Yellow)
+    custom4.selectTireType(TireType.Yellow)
 })
 ```
 
 ```template
 custom.whenStartThree(function () {
     custom2.selectCarType(CarType.Compact)
-    custom2.selectBodyColor(BodyColor.Yellow)
-    custom2.selectTireType(TireType.Yellow)
+    custom3.selectBodyColor(BodyColor.Yellow)
+    custom4.selectTireType(TireType.Yellow)
 })
 ```
