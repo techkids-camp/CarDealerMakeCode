@@ -72,16 +72,6 @@ namespace custom {
         agent.turn(LEFT_TURN)
         agent.move(RIGHT, 5)
         agent.turn(LEFT_TURN)
-        agent.move(UP, 1)
-        agent.move(RIGHT, 7)
-        agent.turn(LEFT_TURN)
-        agent.move(RIGHT, 5)
-        agent.turn(LEFT_TURN)
-        agent.move(RIGHT, 7)
-        agent.turn(LEFT_TURN)
-        agent.move(RIGHT, 5)
-        agent.turn(LEFT_TURN)
-        agent.move(DOWN, 1)
     }
     //% blockId=whenStartZero
     //% block=くるまをつくるとき
