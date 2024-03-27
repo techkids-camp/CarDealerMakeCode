@@ -12,35 +12,35 @@ enum CarType {
     //% block="トラック"
     Truck = 3,
     //% block="バイク"
-    Bike,
+    Bike = 4,
     //% block="セダン"
-    Sedan,
+    Sedan = 5,
     //% block="コンパクトカー"
-    Compact
+    Compact = 6
 }
 
 enum BodyColor {
     //% block="しろ"
-    White,
+    White = 1,
     //% block="あお"
-    Blue,
+    Blue = 2,
     //% block="あか"
-    Red,
+    Red = 3,
     //% block="みどり"
-    Green,
+    Green = 4,
     //% block="くろ"
-    Black,
+    Black = 5,
     //% block="きいろ"
-    Yellow
+    Yellow = 6
 }
 
 enum TireType {
     //% block="シルバー"
-    Silver,
+    Silver = 1,
     //% block="きいろ"
-    Yellow,
+    Yellow = 2,
     //% block="くろ"
-    Black
+    Black = 3
 }
 
 let carType: CarType | null = null
@@ -184,6 +184,10 @@ namespace custom {
         enableIntract(function () {
             handler();
             animation(1218, 64, 1215);
+            player.execute("scoreboard players set @s carType " + carType)
+            player.execute("scoreboard players set @s bodyColor " + bodyColor)
+            player.execute("scoreboard players set @s tireType " + tireType)
+
             player.execute("scoreboard players add @s phase 1")
         })
     }
