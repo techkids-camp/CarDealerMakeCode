@@ -52,9 +52,31 @@ let tireType: TireType | null = null
  */
 //% weight=100 color=#0fbc11 icon="\uf1b9" block="カーディーラー"
 namespace custom {
+    function animation(startX: number, startY: number, startZ: number) {
+        agent.teleport(world(startX, startY, startZ), NORTH)
+        agent.move(RIGHT, 7)
+        agent.turn(LEFT_TURN)
+        agent.move(RIGHT, 5)
+        agent.turn(LEFT_TURN)
+        agent.move(RIGHT, 7)
+        agent.turn(LEFT_TURN)
+        agent.move(RIGHT, 5)
+        agent.turn(LEFT_TURN)
+        agent.move(UP, 1)
+        agent.move(RIGHT, 7)
+        agent.turn(LEFT_TURN)
+        agent.move(RIGHT, 5)
+        agent.turn(LEFT_TURN)
+        agent.move(RIGHT, 7)
+        agent.turn(LEFT_TURN)
+        agent.move(RIGHT, 5)
+        agent.turn(LEFT_TURN)
+        agent.move(DOWN, 1)
+    }
     //% blockId=whenStartZero
     //% block=くるまをつくるとき
     export function whenStartZero(handler: () => void): void {
+        animation(1216, 64, 1263);
         player.execute("scoreboard players add @s phase 1")
     }
 
@@ -67,6 +89,7 @@ namespace custom {
             bodyColor == BodyColor.White,
             tireType == TireType.Silver
         ) {
+            animation(1218, 64, 1255);
             player.execute("scoreboard players add @s phase 1")
         } else {
             player.execute("scoreboard players add @s phase 2")
@@ -82,6 +105,7 @@ namespace custom {
             bodyColor == BodyColor.Blue,
             tireType == TireType.Yellow
         ) {
+            animation(1218, 64, 1246);
             player.execute("scoreboard players add @s phase 1")
         } else {
             player.execute("scoreboard players add @s phase 2")
@@ -97,6 +121,7 @@ namespace custom {
             bodyColor == BodyColor.Yellow,
             tireType == TireType.Yellow
         ) {
+            animation(1218, 64, 1237);
             player.execute("scoreboard players add @s phase 1")
         } else {
             player.execute("scoreboard players add @s phase 2")
@@ -112,6 +137,7 @@ namespace custom {
             bodyColor == BodyColor.Black,
             tireType == TireType.Black
         ) {
+            animation(1218, 64, 1228);
             player.execute("scoreboard players add @s phase 1")
         } else {
             player.execute("scoreboard players add @s phase 2")
@@ -122,6 +148,7 @@ namespace custom {
     //% block=くるまをつくるとき
     export function whenStartFree(handler: () => void): void {
         handler();
+        animation(1218, 64, 1215);
         player.execute("scoreboard players add @s phase 1")
     }
 
