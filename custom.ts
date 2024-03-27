@@ -66,11 +66,11 @@ namespace custom {
     function animation(startX: number, startY: number, startZ: number) {
         player.execute("tag @a add making")
         loops.runInBackground(function () {
-            loops.pause(3000)
+            loops.pause(2000)
             player.execute("scoreboard players set @a progress 1")
-            loops.pause(3000)
+            loops.pause(2000)
             player.execute("scoreboard players set @a progress 2")
-            loops.pause(3000)
+            loops.pause(2000)
             player.execute("scoreboard players set @a progress 3")
             isFinish = true
         })
@@ -94,6 +94,7 @@ namespace custom {
             agent.turn(LEFT_TURN)
             if (isFinish === true) break;
         }
+        agent.teleport(world(startX, startY, startZ), NORTH)
         player.execute("tag @a remove making")
     }
     //% blockId=whenStartZero
