@@ -54,6 +54,7 @@ let tireType: TireType | null = null
 namespace custom {
 
     let isIntracted: Boolean = false
+    let isFinish: Boolean = false
     function enableIntract(handler: () => void) {
         player.onItemInteracted(WOODEN_PICKAXE, function () {
             if (isIntracted === false) {
@@ -63,15 +64,37 @@ namespace custom {
         })
     }
     function animation(startX: number, startY: number, startZ: number) {
+        player.execute("tag @a add making")
+        loops.runInBackground(function () {
+            loops.pause(3000)
+            player.execute("scoreboard players set @a progress 1")
+            loops.pause(3000)
+            player.execute("scoreboard players set @a progress 2")
+            loops.pause(3000)
+            player.execute("scoreboard players set @a progress 3")
+            isFinish = true
+        })
         agent.teleport(world(startX, startY, startZ), NORTH)
-        agent.move(RIGHT, 7)
-        agent.turn(LEFT_TURN)
-        agent.move(RIGHT, 5)
-        agent.turn(LEFT_TURN)
-        agent.move(RIGHT, 7)
-        agent.turn(LEFT_TURN)
-        agent.move(RIGHT, 5)
-        agent.turn(LEFT_TURN)
+        while (isFinish === false) {
+            if (isFinish === true) break;
+            agent.move(RIGHT, 7)
+            if (isFinish === true) break;
+            agent.turn(LEFT_TURN)
+            if (isFinish === true) break;
+            agent.move(RIGHT, 5)
+            if (isFinish === true) break;
+            agent.turn(LEFT_TURN)
+            if (isFinish === true) break;
+            agent.move(RIGHT, 7)
+            if (isFinish === true) break;
+            agent.turn(LEFT_TURN)
+            if (isFinish === true) break;
+            agent.move(RIGHT, 5)
+            if (isFinish === true) break;
+            agent.turn(LEFT_TURN)
+            if (isFinish === true) break;
+        }
+        player.execute("tag @a remove making")
     }
     //% blockId=whenStartZero
     //% block=くるまをつくるとき
