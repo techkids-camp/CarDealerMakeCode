@@ -94,7 +94,7 @@ namespace custom {
             agent.turn(LEFT_TURN)
             if (isFinish === true) break;
         }
-        agent.teleport(world(startX, startY, startZ), NORTH)
+        agent.teleport(world(startX, startY, startZ), direction)
         player.execute("tag @a remove making")
     }
     //% blockId=whenStartZero
