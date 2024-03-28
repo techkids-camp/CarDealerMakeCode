@@ -63,7 +63,7 @@ namespace custom {
             }
         })
     }
-    function animation(startX: number, startY: number, startZ: number) {
+    function animation(startX: number, startY: number, startZ: number, direction: CompassDirection) {
         player.execute("tag @a add making")
         loops.runInBackground(function () {
             loops.pause(2000)
@@ -74,7 +74,7 @@ namespace custom {
             player.execute("scoreboard players set @a progress 3")
             isFinish = true
         })
-        agent.teleport(world(startX, startY, startZ), NORTH)
+        agent.teleport(world(startX, startY, startZ), direction)
         while (isFinish === false) {
             if (isFinish === true) break;
             agent.move(RIGHT, 7)
@@ -100,8 +100,8 @@ namespace custom {
     //% blockId=whenStartZero
     //% block=くるまをつくるとき
     export function whenStartZero(handler: () => void): void {
-        enableIntract(function(){
-            animation(1216, 64, 1263);
+        enableIntract(function () {
+            animation(1216, 64, 1261, EAST);
             player.execute("scoreboard players add @s phase 1")
         })
     }
@@ -116,7 +116,7 @@ namespace custom {
                 bodyColor == BodyColor.White,
                 tireType == TireType.Silver
             ) {
-                animation(1218, 64, 1255);
+                animation(1218, 64, 1255, NORTH);
                 player.execute("scoreboard players add @s phase 1")
             } else {
                 player.execute("scoreboard players add @s phase 2")
@@ -134,7 +134,7 @@ namespace custom {
                 bodyColor == BodyColor.Blue,
                 tireType == TireType.Yellow
             ) {
-                animation(1218, 64, 1246);
+                animation(1218, 64, 1246, NORTH);
                 player.execute("scoreboard players add @s phase 1")
             } else {
                 player.execute("scoreboard players add @s phase 2")
@@ -152,7 +152,7 @@ namespace custom {
                 bodyColor == BodyColor.Yellow,
                 tireType == TireType.Yellow
             ) {
-                animation(1218, 64, 1237);
+                animation(1218, 64, 1237, NORTH);
                 player.execute("scoreboard players add @s phase 1")
             } else {
                 player.execute("scoreboard players add @s phase 2")
@@ -170,7 +170,7 @@ namespace custom {
                 bodyColor == BodyColor.Black,
                 tireType == TireType.Black
             ) {
-                animation(1218, 64, 1228);
+                animation(1218, 64, 1228, NORTH);
                 player.execute("scoreboard players add @s phase 1")
             } else {
                 player.execute("scoreboard players add @s phase 2")
@@ -183,11 +183,10 @@ namespace custom {
     export function whenStartFree(handler: () => void): void {
         enableIntract(function () {
             handler();
-            animation(1218, 64, 1215);
-            player.execute("scoreboard players set @s carType " + carType)
-            player.execute("scoreboard players set @s bodyColor " + bodyColor)
-            player.execute("scoreboard players set @s tireType " + tireType)
-
+            player.execute("scoreboard players set @s carType " + (carType == null ? 0 : carType))
+            player.execute("scoreboard players set @s bodyColor " + (bodyColor == null ? 0 : bodyColor))
+            player.execute("scoreboard players set @s tireType " + (tireType == null ? 0 : tireType))
+            animation(1218, 64, 1215, NORTH);
             player.execute("scoreboard players add @s phase 1")
         })
     }
