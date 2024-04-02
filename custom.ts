@@ -102,7 +102,7 @@ namespace custom {
     export function whenStartZero(handler: () => void): void {
         enableIntract(function () {
             animation(1216, 64, 1261, EAST);
-            player.execute("scoreboard players add @s phase 1")
+            player.execute("scoreboard players add @s[tag=wait] phase 1")
         })
     }
 
@@ -117,9 +117,9 @@ namespace custom {
                 tireType == TireType.Silver
             ) {
                 animation(1218, 64, 1255, NORTH);
-                player.execute("scoreboard players add @s phase 1")
+                player.execute("scoreboard players add @s[tag=wait] phase 1")
             } else {
-                player.execute("scoreboard players add @s phase 2")
+                player.execute("scoreboard players add @s[tag=wait] phase 2")
             }
         })
     }
@@ -135,9 +135,9 @@ namespace custom {
                 tireType == TireType.Yellow
             ) {
                 animation(1218, 64, 1246, NORTH);
-                player.execute("scoreboard players add @s phase 1")
+                player.execute("scoreboard players add @s[tag=wait] phase 1")
             } else {
-                player.execute("scoreboard players add @s phase 2")
+                player.execute("scoreboard players add @s[tag=wait] phase 2")
             }
         })
     }
@@ -153,9 +153,9 @@ namespace custom {
                 tireType == TireType.Yellow
             ) {
                 animation(1218, 64, 1237, NORTH);
-                player.execute("scoreboard players add @s phase 1")
+                player.execute("scoreboard players add @s[tag=wait] phase 1")
             } else {
-                player.execute("scoreboard players add @s phase 2")
+                player.execute("scoreboard players add @s[tag=wait] phase 2")
             }
         })
     }
@@ -171,9 +171,9 @@ namespace custom {
                 tireType == TireType.Black
             ) {
                 animation(1218, 64, 1228, NORTH);
-                player.execute("scoreboard players add @s phase 1")
+                player.execute("scoreboard players add @s[tag=wait] phase 1")
             } else {
-                player.execute("scoreboard players add @s phase 2")
+                player.execute("scoreboard players add @s[tag=wait] phase 2")
             }
         })
     }
@@ -187,7 +187,7 @@ namespace custom {
             player.execute("scoreboard players set @s bodyColor " + (bodyColor == null ? 0 : bodyColor))
             player.execute("scoreboard players set @s tireType " + (tireType == null ? 0 : tireType))
             animation(1218, 64, 1215, NORTH);
-            player.execute("scoreboard players add @s phase 1")
+            player.execute("scoreboard players add @s[tag=wait] phase 1")
         })
     }
 
