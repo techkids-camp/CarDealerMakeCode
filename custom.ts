@@ -5,6 +5,8 @@
 */
 
 enum CarType {
+    //% block="　"
+    Space = 0,
     //% block="スポーツカー"
     Sports = 1,
     //% block="ワゴン"
@@ -20,6 +22,8 @@ enum CarType {
 }
 
 enum BodyColor {
+    //% block="　"
+    Space = 0,
     //% block="しろ"
     White = 1,
     //% block="あお"
@@ -35,6 +39,8 @@ enum BodyColor {
 }
 
 enum TireType {
+    //% block="　"
+    Space = 0,
     //% block="シルバー"
     Silver = 1,
     //% block="きいろ"
@@ -50,7 +56,7 @@ let tireType: TireType | null = null
 /**
  * Custom blocks
  */
-//% weight=100 color=#0fbc11 icon="\uf1b9" block="カーディーラー"
+//% weight=100 color=#58c000 icon="\uf1b9" block="カーディーラー"
 namespace custom {
 
     let isIntracted: Boolean = false
@@ -98,7 +104,7 @@ namespace custom {
         player.execute("tag @a remove making")
     }
     //% blockId=whenStartZero
-    //% block=くるまをつくるとき
+    //% block=クルマをつくる
     export function whenStartZero(handler: () => void): void {
         enableIntract(function () {
             animation(1216, 64, 1261, EAST);
@@ -107,8 +113,9 @@ namespace custom {
     }
 
     //% blockId=whenStartOne
-    //% block=くるまをつくるとき
+    //% block=クルマをつくる
     export function whenStartOne(handler: () => void): void {
+        player.execute("scoreboard players add @s[tag=first] robot 1")
         enableIntract(function () {
             handler();
             if (
@@ -125,7 +132,7 @@ namespace custom {
     }
 
     //% blockId=whenStartTwo
-    //% block=くるまをつくるとき
+    //% block=クルマをつくる
     export function whenStartTwo(handler: () => void): void {
         enableIntract(function () {
             handler();
@@ -143,7 +150,7 @@ namespace custom {
     }
 
     //% blockId=whenStartThree
-    //% block=くるまをつくるとき
+    //% block=クルマをつくる
     export function whenStartThree(handler: () => void): void {
         enableIntract(function () {
             handler();
@@ -161,7 +168,7 @@ namespace custom {
     }
 
     //% blockId=whenStartFour
-    //% block=くるまをつくるとき
+    //% block=クルマをつくる
     export function whenStartFour(handler: () => void): void {
         enableIntract(function () {
             handler();
@@ -179,7 +186,7 @@ namespace custom {
     }
 
     //% blockId=whenStartFree
-    //% block=くるまをつくるとき
+    //% block=クルマをつくる
     export function whenStartFree(handler: () => void): void {
         enableIntract(function () {
             handler();
@@ -192,7 +199,7 @@ namespace custom {
     }
 
     //% blockId=whenStartDummy
-    //% block=くるまをつくるとき
+    //% block=クルマをつくる
     export function whenStartDummy(handler: () => void): void {
     }
 }
@@ -201,7 +208,7 @@ namespace custom {
 /**
  * Custom blocks
  */
-//% weight=100 color=#f4a460 icon="\uf0ad" block="くるまづくり"
+//% weight=100 color=#f8a030 icon="\uf0ad" block="クルマづくり"
 namespace custom2 {
     //% blockId=selectCarType
     //% block="車のタイプを$newCarTypeにする"
@@ -213,7 +220,7 @@ namespace custom2 {
 /**
  * Custom blocks
  */
-//% weight=100 color=#2f4f4f icon="\uf0ad" block="くるまづくり"
+//% weight=100 color=#00b0d0 icon="\uf0ad" block="クルマづくり"
 namespace custom3 {
     //% blockId=selectBodyColor
     //% block="ボディの色を$newBodyColorにする"
@@ -225,7 +232,7 @@ namespace custom3 {
 /**
  * Custom blocks
  */
-//% weight=100 color=#0d0015 icon="\uf0ad" block="くるまづくり"
+//% weight=100 color=#081048 icon="\uf0ad" block="クルマづくり"
 namespace custom4 {
     //% blockId=selectTireType
     //% block="タイヤを$newTireTypeにする"
