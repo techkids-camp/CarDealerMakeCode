@@ -1,24 +1,27 @@
 ### @flyoutOnly true
 ### @hideIteration true
 
-# 車を作ってみよう！
+# クルマを作ってみよう！
 
-## やってみよう！
+## プログラムをかえよう！
 
-やってみよう！
+ブロックの▽を**タッチ**して  
+このようなプログラムにかえよう！  
+  
+<img src="https://github.com/techkids-camp/CarDealerMakeCode/blob/master/image/playbutton.png?raw=true" width="200">
+  
+プログラムをかえたら  
+<img src="https://github.com/techkids-camp/CarDealerMakeCode/blob/master/image/playbutton.png?raw=true" width="50">
+をおそう！
 
 ```ghost
 custom.whenStartTwo(function () {
-    custom2.selectCarType(CarType.Wagon)
-    custom3.selectBodyColor(BodyColor.Blue)
-    custom4.selectTireType(TireType.Yellow)
+
 })
 ```
 
 ```template
-custom.whenStartTwo(function () {
-    custom2.selectCarType(CarType.Wagon)
-    custom3.selectBodyColor(BodyColor.Blue)
-    custom4.selectTireType(TireType.Yellow)
-})
+    custom2.selectCarType(CarType.Space)
+    custom3.selectBodyColor(BodyColor.Space)
+    custom4.selectTireType(TireType.Space)
 ```
