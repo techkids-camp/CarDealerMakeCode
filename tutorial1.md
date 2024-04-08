@@ -15,13 +15,15 @@
 をおそう！
 
 ```ghost
-
-```
-
-```template
 custom.whenStartOne(function () {
     custom2.selectCarType(CarType.Space)
     custom3.selectBodyColor(BodyColor.Space)
     custom4.selectTireType(TireType.Space)
+})
+```
+
+```template
+custom.whenStartOne(function () {
+
 })
 ```
