@@ -1,21 +1,27 @@
 ### @flyoutOnly true
 ### @hideIteration true
 
-# 車を作ってみよう！
+# クルマを作ってみよう！
 
-## やってみよう！
+## じゆうに作ろう！
 
-やってみよう！
+プログラムを組み立てて  
+**じぶんだけのクルマ**を作ろう！  
+  
+プログラムが作れたら  
+<img src="https://github.com/techkids-camp/CarDealerMakeCode/blob/master/image/playbutton.png?raw=true" width="50">
+をおそう！
 
 ```ghost
 custom.whenStartFree(function () {
-    custom2.selectCarType(CarType.Sports)
-    custom3.selectBodyColor(BodyColor.Black)
-    custom4.selectTireType(TireType.Black)
+
 })
 ```
 
 ```template
 custom.whenStartFree(function () {
+    custom2.selectCarType(CarType.Space)
+    custom3.selectBodyColor(BodyColor.Space)
+    custom4.selectTireType(TireType.Space)
 })
 ```
