@@ -16,9 +16,7 @@
 
 ```ghost
 custom.whenStartTwo(function () {
-    custom2.selectCarType(CarType.Space)
-    custom3.selectBodyColor(BodyColor.Space)
-    custom4.selectTireType(TireType.Space)
+
 })
 ```
 
