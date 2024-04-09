@@ -5,8 +5,8 @@
 
 ## プログラムをかえよう！
 
-ブロックの▽を**タッチ**して  
-このようなプログラムにかえよう！  
+ゆびでブロックをいどうさせて
+このようなプログラムをつくろう！
   
 <img src="https://github.com/techkids-camp/CarDealerMakeCode/blob/master/image/car3.png?raw=true" width="200">
   
