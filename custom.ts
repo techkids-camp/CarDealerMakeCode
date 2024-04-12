@@ -189,7 +189,7 @@ namespace custom {
     //% block=クルマをつくる
     export function whenStartFree(handler: () => void): void {
         enableIntract(function () {
-            player.execute("tag @a[scores={phase=3} add carReset")
+            player.execute("tag @s add carReset")
             handler();
             player.execute("scoreboard players set @s carType " + (carType == null ? 0 : carType))
             player.execute("scoreboard players set @s bodyColor " + (bodyColor == null ? 0 : bodyColor))
