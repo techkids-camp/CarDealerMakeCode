@@ -9,7 +9,7 @@
 このようなプログラムをつくろう！
 
   
-<img src="https://github.com/techkids-camp/CarDealerMakeCode/blob/master/image/car2.png?raw=true" width="200">
+<img src="https://github.com/techkids-camp/CarDealerMakeCode/blob/master/image/car2.png?raw=true" width="100%">
   
 プログラムをかえたら  
 <img src="https://github.com/techkids-camp/CarDealerMakeCode/blob/master/image/playbutton.png?raw=true" width="50">

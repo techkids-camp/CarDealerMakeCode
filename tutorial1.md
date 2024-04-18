@@ -5,10 +5,10 @@
 
 ## プログラムをかえよう！
 
-ブロックの▽を**タッチ**して  
+ブロックの▽を `||agent.タッチ||` して  
 このようなプログラムにかえよう！  
   
-<img src="https://github.com/techkids-camp/CarDealerMakeCode/blob/master/image/car1.png?raw=true" width="200">
+<img src="https://github.com/techkids-camp/CarDealerMakeCode/blob/master/image/car1.png?raw=true" width="100%">
   
 プログラムをかえたら  
 <img src="https://github.com/techkids-camp/CarDealerMakeCode/blob/master/image/playbutton.png?raw=true" width="50">
