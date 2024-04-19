@@ -119,8 +119,8 @@ namespace custom {
         enableIntract(function () {
             handler();
             if (
-                carType == CarType.Sedan,
-                bodyColor == BodyColor.White,
+                carType == CarType.Sedan &&
+                bodyColor == BodyColor.White &&
                 tireType == TireType.Silver
             ) {
                 animation(1218, 64, 1255, NORTH);
@@ -137,8 +137,8 @@ namespace custom {
         enableIntract(function () {
             handler();
             if (
-                carType == CarType.Wagon,
-                bodyColor == BodyColor.Blue,
+                carType == CarType.Wagon &&
+                bodyColor == BodyColor.Blue &&
                 tireType == TireType.Yellow
             ) {
                 animation(1218, 64, 1246, NORTH);
@@ -155,8 +155,8 @@ namespace custom {
         enableIntract(function () {
             handler();
             if (
-                carType == CarType.Compact,
-                bodyColor == BodyColor.Yellow,
+                carType == CarType.Compact &&
+                bodyColor == BodyColor.Yellow &&
                 tireType == TireType.Yellow
             ) {
                 animation(1218, 64, 1237, NORTH);
@@ -173,8 +173,8 @@ namespace custom {
         enableIntract(function () {
             handler();
             if (
-                carType == CarType.Sports,
-                bodyColor == BodyColor.Black,
+                carType == CarType.Sports &&
+                bodyColor == BodyColor.Black &&
                 tireType == TireType.Black
             ) {
                 animation(1218, 64, 1228, NORTH);
