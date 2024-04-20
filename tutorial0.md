@@ -2,6 +2,8 @@
 ### @hideIteration true
 
 # クルマを作ってみよう！
+
+##　
   
 <img src="https://github.com/techkids-camp/CarDealerMakeCode/blob/master/image/car0.png?raw=true" width="100%">
   
