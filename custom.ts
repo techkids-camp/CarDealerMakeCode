@@ -103,25 +103,36 @@ namespace custom {
         agent.teleport(world(startX, startY, startZ), direction)
         player.execute("tag @a remove making")
     }
+    
     //% blockId=whenStartZero
     //% block=クルマをつくる
     export function whenStartZero(handler: () => void): void {
-        enableIntract(function () {
-            animation(1216, 64, 1261, EAST);
-            player.execute("scoreboard players add @s[tag=wait] phase 1")
-        })
-    }
-
-    //% blockId=whenStartOne
-    //% block=クルマをつくる
-    export function whenStartOne(handler: () => void): void {
-        player.execute("scoreboard players add @s[tag=first] robot 1")
+        player.execute("scoreboard players add @s[tag=boot] robot 1")
         enableIntract(function () {
             handler();
             if (
                 carType == CarType.Sedan &&
                 bodyColor == BodyColor.White &&
                 tireType == TireType.Silver
+            ) {
+                animation(1218, 64, 1264, NORTH);
+                player.execute("scoreboard players add @s[tag=wait] phase 1")
+            } else {
+                player.execute("scoreboard players add @s[tag=wait] phase 2")
+            }
+        })
+    }
+
+    //% blockId=whenStartOne
+    //% block=クルマをつくる
+    export function whenStartOne(handler: () => void): void {
+        player.execute("scoreboard players add @s[tag=boot] robot 1")
+        enableIntract(function () {
+            handler();
+            if (
+                carType == CarType.Wagon &&
+                bodyColor == BodyColor.Blue &&
+                tireType == TireType.Yellow
             ) {
                 animation(1218, 64, 1255, NORTH);
                 player.execute("scoreboard players add @s[tag=wait] phase 1")
@@ -134,11 +145,12 @@ namespace custom {
     //% blockId=whenStartTwo
     //% block=クルマをつくる
     export function whenStartTwo(handler: () => void): void {
+        player.execute("scoreboard players add @s[tag=boot] robot 1")
         enableIntract(function () {
             handler();
             if (
-                carType == CarType.Wagon &&
-                bodyColor == BodyColor.Blue &&
+                carType == CarType.Compact &&
+                bodyColor == BodyColor.Yellow &&
                 tireType == TireType.Yellow
             ) {
                 animation(1218, 64, 1246, NORTH);
@@ -152,12 +164,13 @@ namespace custom {
     //% blockId=whenStartThree
     //% block=クルマをつくる
     export function whenStartThree(handler: () => void): void {
+        player.execute("scoreboard players add @s[tag=boot] robot 1")
         enableIntract(function () {
             handler();
             if (
-                carType == CarType.Compact &&
-                bodyColor == BodyColor.Yellow &&
-                tireType == TireType.Yellow
+                carType == CarType.Truck &&
+                bodyColor == BodyColor.Green &&
+                tireType == TireType.Silver
             ) {
                 animation(1218, 64, 1237, NORTH);
                 player.execute("scoreboard players add @s[tag=wait] phase 1")
@@ -170,6 +183,7 @@ namespace custom {
     //% blockId=whenStartFour
     //% block=クルマをつくる
     export function whenStartFour(handler: () => void): void {
+        player.execute("scoreboard players add @s[tag=boot] robot 1")
         enableIntract(function () {
             handler();
             if (
@@ -191,11 +205,19 @@ namespace custom {
         enableIntract(function () {
             player.execute("tag @s add carReset")
             handler();
-            player.execute("scoreboard players set @s carType " + (carType == null ? 0 : carType))
-            player.execute("scoreboard players set @s bodyColor " + (bodyColor == null ? 0 : bodyColor))
-            player.execute("scoreboard players set @s tireType " + (tireType == null ? 0 : tireType))
-            animation(1218, 64, 1215, NORTH);
-            player.execute("scoreboard players add @s[tag=wait] phase 1")
+            if (
+                carType == CarType.Space ||
+                bodyColor == BodyColor.Space ||
+                tireType == TireType.Space
+            ) {
+                
+            } else {
+                player.execute("scoreboard players set @s carType " + (carType == null ? 0 : carType))
+                player.execute("scoreboard players set @s bodyColor " + (bodyColor == null ? 0 : bodyColor))
+                player.execute("scoreboard players set @s tireType " + (tireType == null ? 0 : tireType))
+                animation(1218, 64, 1215, NORTH);
+                player.execute("scoreboard players add @s[tag=wait] phase 1")
+            }
         })
     }
 
