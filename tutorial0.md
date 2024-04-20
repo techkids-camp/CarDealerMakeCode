@@ -9,7 +9,7 @@
 をおそう！
 
 ```ghost
-custom.whenStartOne(function () {
+custom.whenStartZero(function () {
     custom2.selectCarType(CarType.Sedan)
     custom3.selectBodyColor(BodyColor.White)
     custom4.selectTireType(TireType.Silver)
@@ -17,7 +17,7 @@ custom.whenStartOne(function () {
 ```
 
 ```template
-custom.whenStartOne(function () {
+custom.whenStartZero(function () {
     custom2.selectCarType(CarType.Sedan)
     custom3.selectBodyColor(BodyColor.White)
     custom4.selectTireType(TireType.Silver)
