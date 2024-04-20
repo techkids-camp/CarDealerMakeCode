@@ -73,11 +73,11 @@ namespace custom {
         player.execute("tag @a add making")
         loops.runInBackground(function () {
             loops.pause(2000)
-            player.execute("scoreboard players set @a progress 1")
+            player.execute("scoreboard players set @a[tag=wait] progress 1")
             loops.pause(2000)
-            player.execute("scoreboard players set @a progress 2")
+            player.execute("scoreboard players set @a[tag=wait] progress 2")
             loops.pause(2000)
-            player.execute("scoreboard players set @a progress 3")
+            player.execute("scoreboard players set @a[tag=wait] progress 3")
             isFinish = true
         })
         agent.teleport(world(startX, startY, startZ), direction)
