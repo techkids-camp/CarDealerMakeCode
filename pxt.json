@@ -16,7 +16,8 @@
         "tutorial3.md",
         "tutorial4.md",
         "tutorialfree.md",
-        "tutorialinit.md"
+        "tutorialinit.md",
+        "drive.md"
     ],
     "testFiles": [
         "test.ts"
