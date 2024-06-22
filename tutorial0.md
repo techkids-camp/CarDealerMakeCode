@@ -12,7 +12,7 @@
 
 ```ghost
 custom.whenStartZero(function () {
-    custom2.selectCarType(CarType.Sedan)
+    custom2.selectCarType(CarType.Sports)
     custom3.selectBodyColor(BodyColor.White)
     custom4.selectTireType(TireType.Silver)
 })
@@ -20,7 +20,7 @@ custom.whenStartZero(function () {
 
 ```template
 custom.whenStartZero(function () {
-    custom2.selectCarType(CarType.Sedan)
+    custom2.selectCarType(CarType.Sports)
     custom3.selectBodyColor(BodyColor.White)
     custom4.selectTireType(TireType.Silver)
 })

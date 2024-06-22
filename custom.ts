@@ -9,16 +9,16 @@ enum CarType {
     Space = 0,
     //% block="スポーツカー"
     Sports = 1,
-    //% block="ワゴン"
-    Wagon = 2,
-    //% block="トラック"
-    Truck = 3,
-    //% block="バイク"
-    Bike = 4,
-    //% block="セダン"
-    Sedan = 5,
     //% block="コンパクトカー"
-    Compact = 6
+    Compact = 2,
+    //% block="ミニバン"
+    MiniVan = 3,
+    //% block="SUV"
+    SUV = 4,
+    //% block="バイク"
+    Bike = 5,
+    //% block="F1カー"
+    FormulaOne = 6
 }
 
 enum BodyColor {
@@ -103,7 +103,7 @@ namespace custom {
         agent.teleport(world(startX, startY, startZ), direction)
         player.execute("tag @a remove making")
     }
-    
+
     //% blockId=whenStartZero
     //% block=クルマをつくる
     export function whenStartZero(handler: () => void): void {
@@ -111,7 +111,7 @@ namespace custom {
         enableIntract(function () {
             handler();
             if (
-                carType == CarType.Sedan &&
+                carType == CarType.Sports &&
                 bodyColor == BodyColor.White &&
                 tireType == TireType.Silver
             ) {
@@ -130,7 +130,7 @@ namespace custom {
         enableIntract(function () {
             handler();
             if (
-                carType == CarType.Wagon &&
+                carType == CarType.SUV &&
                 bodyColor == BodyColor.Blue &&
                 tireType == TireType.Yellow
             ) {
@@ -168,7 +168,7 @@ namespace custom {
         enableIntract(function () {
             handler();
             if (
-                carType == CarType.Truck &&
+                carType == CarType.MiniVan &&
                 bodyColor == BodyColor.Green &&
                 tireType == TireType.Silver
             ) {
@@ -187,7 +187,7 @@ namespace custom {
         enableIntract(function () {
             handler();
             if (
-                carType == CarType.Sports &&
+                carType == CarType.FormulaOne &&
                 bodyColor == BodyColor.Black &&
                 tireType == TireType.Black
             ) {
@@ -210,7 +210,7 @@ namespace custom {
                 bodyColor == BodyColor.Space ||
                 tireType == TireType.Space
             ) {
-                
+
             } else {
                 player.execute("scoreboard players set @s carType " + (carType == null ? 0 : carType))
                 player.execute("scoreboard players set @s bodyColor " + (bodyColor == null ? 0 : bodyColor))
@@ -263,4 +263,3 @@ namespace custom4 {
         tireType = newTireType
     }
 }
-
