@@ -18,7 +18,6 @@
 custom.whenStartOne(function () {
     custom2.selectCarType(CarType.Space)
     custom3.selectBodyColor(BodyColor.Space)
-    custom4.selectTireType(TireType.Space)
 })
 ```
 
@@ -26,6 +25,5 @@ custom.whenStartOne(function () {
 custom.whenStartOne(function () {
     custom2.selectCarType(CarType.Space)
     custom3.selectBodyColor(BodyColor.Space)
-    custom4.selectTireType(TireType.Space)
 })
 ```
